@@ -1,0 +1,56 @@
+
+\documentclass{voorstel}
+
+\usepackage{lipsum}
+\bibliography{voorstel.bib}
+%------------------------------------------------------------------------------
+% Metadata over het voorstel
+%------------------------------------------------------------------------------
+
+%---------- Titel & auteur ----------------------------------------------------
+
+\PaperTitle{De impact van de transformatie van monolitische systemen naar microservices}
+\PaperType{Onderzoeksvoorstel Bachelorproef 2020-2021} % Type document
+
+\Authors{Joery Haelewyck\textsuperscript{1}} % Authors
+\CoPromotor{Yentl Verhelst\textsuperscript{2} (TUI), Alexander Sels\textsuperscript{3} (Liantis)}
+\affiliation{\textbf{Contact:}
+  \textsuperscript{1} \href{mailto:joery.haelewyck.w4357@student.hogent.be}{joery.haelewyck.w4357@student.hogent.be};
+  \textsuperscript{2} \href{mailto:yentl.verhelst@tui.be}{yentl.verhelst@tui.be};
+  \textsuperscript{3}
+  \href{mailto:alexandersels@hotmail.com}{alexandersels@hotmail.com}
+}
+
+\Abstract{In dit onderzoek wordt gezocht naar de precieze impact van de transformatie van een monolitische software architectuur naar een systeem bestaande uit microservices. Om een schatting te maken van hoe groot of klein deze impact kan zijn, zal eerst onderzocht worden hoe een dergelijke transformatie precies verloopt. Naarmate het onderzoek vordert en meer kennis en inzicht verworven wordt omtrent deze architecturen, zal het financiële aspect, de performantie en het sociale facet omtrent de transformatie geanalyseerd worden.
+Microservices zitten in de lift en steeds meer bedrijven maken gebruik van dit concept. Het is dan ook van uiterst belang om te begrijpen wat de voor- en nadelen van deze architectuur zijn.}
+
+\Keywords{Software-architectuur. microservice --- monoliet --- transformatie} % Keywords
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+
+%---------- Titel, inhoud -----------------------------------------------------
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------------
+% Hoofdtekst
+%------------------------------------------------------------------------------
+
+% De hoofdtekst van het voorstel zit in een apart bestand, zodat het makkelijk
+% kan opgenomen worden in de bijlagen van de bachelorproef zelf.
+\input{voorstel-inhoud}
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+% voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
+% om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
+% BibLaTeX mode)
+\phantomsection
+\printbibliography[heading=bibintoc]
+
+\end{document}
