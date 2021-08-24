@@ -6,7 +6,10 @@
 \documentclass{bachproef-tin}
 
 \usepackage{hogent-thesis-titlepage} % Titelpagina conform aan HOGENT huisstijl
-
+\usepackage[utf8]{inputenc}
+\usepackage{glossaries}
+\makeglossaries
+\newglossaryentry{dansen}{name={dansen},description={jajajajaja}}
 %%---------- Documenteigenschappen ---------------------------------------------
 % TODO: Vul dit aan met je eigen info:
 
@@ -75,8 +78,8 @@
 % de figuur of tabel zelf.
 
 \listoffigures
-\listoftables
-
+\printglossary
+\printglossaries
 % Als je een lijst van afkortingen of termen wil toevoegen, dan hoort die
 % hier thuis. Gebruik bijvoorbeeld de ``glossaries'' package.
 % https://www.overleaf.com/learn/latex/Glossaries
@@ -92,6 +95,8 @@
 \input{inleiding}
 \input{standvanzaken}
 \input{methodologie}
+\input{model}
+\input{usecase}
 
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
@@ -125,6 +130,5 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 
 %%---------- Referentielijst --------------------------------------------------
 
-\printbibliography[heading=bibintoc]
 
 \end{document}

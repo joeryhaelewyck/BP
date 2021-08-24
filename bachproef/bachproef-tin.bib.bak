@@ -60,7 +60,7 @@
   institution = {University of Brighton},
   title       = {A Systematic Mapping Study in MicroserviceArchitecture},
   type        = {resreport},
-  file        = {:C\:/BP/bachproef/docs/ASystemicMappingStudyInMicroserviceArchitecture.pdf:PDF},
+  file        = {:ASystemicMappingStudyInMicroserviceArchitecture.pdf:PDF},
 }
 
 @Article{Koyuncu2017,
@@ -105,8 +105,9 @@
 }
 
 @WWW{Education2019,
-  author = {IBM Cloud Education},
+  author = {Cloud Educuation},
   date   = {2019-07-17},
+  editor = {IBM},
   title  = {SOA (Service-Oriented Architecture)},
   url    = {https://www.ibm.com/cloud/learn/soa},
 }
@@ -123,6 +124,19 @@
   date   = {2021-05-24},
   title  = {Benefits and challenges of using monorepo development practices},
   url    = {https://circleci.com/blog/monorepo-dev-practices/},
+}
+
+@Article{Weiss2018,
+  author = {Todd R. Weiss},
+  date   = {2018-05-07},
+  title  = {Microservice Pricing: What's It all going to cost},
+}
+
+@Manual{Clusters2020,
+  author = {Stijn Clusters, Veronique Debeys, Sandra Peeters, Bram Roosens, Ilse Van den Berckt, Eva Wuyts},
+  date   = {2020},
+  editor = {Elissa Verjans},
+  title  = {Impact een introductie in sociale impactmeting},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
