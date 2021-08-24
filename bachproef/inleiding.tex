@@ -18,17 +18,61 @@ Naast alle voordelen die microservices biedt, brengt het ook wat uitdagingen met
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}
 \label{sec:probleemstelling}
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+De belangrijkste doelgroep van dit onderzoek, zijn de bedrijven die willen overschakelen van een monolitische architectuur naar microservices. Het onderzoek kan ook een meerwaarde hebben voor personen die meer kennis willen verzamelen omtrent deze architecturen. 
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}
 \label{sec:onderzoeksvraag}
 
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+Het doel van dit onderzoek is om te weten te komen wat de precieze impact is wanneer een bedrijf overschakelt van een monolitische architectuur naar een architectuur bestaande uit microservices.
+
+De 3 hoofdvragen van dit onderzoek zijn als volgt:
+\begin{itemize}
+    \item Wat zijn de gevolgen van de transformatie?
+    \item Wat zijn de financiële kosten die gemaakt worden tijdens de transformatie?
+    \item Welk effect heeft deze transformatie op het sociale aspect van het bedrijf?
+\end{itemize}
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}
 \label{sec:onderzoeksdoelstelling}
 
-Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv. om een proof-of-concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
+Gebaseerd op de onderzoeksvragen die terug te vinden zijn in de vorige paragraaf. Wordt het volgende resultaat verwacht:
+
+\begin{itemize}
+    \item Een literatuurstudie omtrent microservices en de monolitische architectuur in software ontwikkeling. Waarin de voordelen en uitdagingen aangehaald worden.
+    \item Een vergelijking tussen de twee architecturen. 
+    \item Een model die als basis dient om een schatting te maken van de impact.
+    \item Het model toepassen op een hedendaagse bedrijfssituatie.
+\end{itemize}
+Naast alle voordelen die microservices biedt, brengt het ook wat uitdagingen met zich mee. Het systeem wordt complexer en mits alle componenten onafhankelijk werken, zorg dit voor een groter druk op de \emph{load balancer}.
+
+\section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}
+\label{sec:probleemstelling}
+
+De belangrijkste doelgroep van dit onderzoek, zijn de bedrijven die willen overschakelen van een monolithische architectuur naar microservices. Het onderzoek kan ook een meerwaarde hebben voor personen die meer kennis willen verzamelen omtrent deze architecturen. 
+
+\section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}
+\label{sec:onderzoeksvraag}
+
+Het doel van dit onderzoek is om te weten te komen wat de precieze impact is wanneer een bedrijf overschakelt van een monolithische architectuur naar een architectuur bestaande uit microservices.
+
+De 3 hoofdvragen van dit onderzoek zijn als volgt:
+\begin{itemize}
+    \item Wat zijn de gevolgen van de transformatie?
+    \item Wat zijn de financiële kosten die gemaakt worden tijdens de transformatie?
+    \item Welk effect heeft deze transformatie op het sociale aspect van het bedrijf?
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}
+\label{sec:onderzoeksdoelstelling}
+
+Gebaseerd op de onderzoeksvragen die terug te vinden zijn in de vorige paragraaf. Wordt het volgende resultaat verwacht:
+
+\begin{itemize}
+    \item Een literatuurstudie omtrent microservices en de monolithische architectuur in software ontwikkeling. Waarin de voordelen en uitdagingen aangehaald worden.
+    \item Een vergelijking tussen de twee architecturen. 
+    \item Een model die als basis dient om een schatting te maken van de impact.
+    \item Het model toepassen op een hedendaagse bedrijfssituatie.
+\end{itemize}
 
 \section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}
 \label{sec:opzet-bachelorproef}
@@ -39,9 +83,30 @@ Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor suc
 
 De rest van deze bachelorproef is als volgt opgebouwd:
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+In Hoofdstuk 2 wordt een over--zicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+
+In Hoofdstuk \ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+
+In Hoofdstuk \ref{ch:model} wordt het model opgebouwd die als basisstuk dient om de schatting te maken van de impact van de transformatie.
+
+In Hoofdstuk \ref{ch:usecase} passen we het model toe op een bedrijf die momenteel een monolithische architectuur gebruikt en overschakelt naar een architectuur bestaande uit microservices.
+--
+\section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}
+\label{sec:opzet-bachelorproef}
+
+% Het is gebruikelijk aan het einde van de inleiding een overzicht te
+% geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
+% die je kan aanvullen/aanpassen in functie van je eigen tekst.
+
+De rest van deze bachelorproef is als volgt opgebouwd:
+
+In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een over--zicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
 
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+
+In Hoofdstuk \ref{ch:model} wordt het model opgebouwd die als basisstuk dient om de schatting te maken van de impact van de transformatie.
+
+In Hoofdstuk \ref{ch:usecase} passen we het model toe op een bedrijf die momenteel een monolitische architectuur gebruikt en overschakelt naar een architectuur bestaande uit microservices.
 
 % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
 
