@@ -36,13 +36,50 @@ Volgens het model wordt de impact opgedeeld in 5 pijlers:
 
 \subsection{Verloop van de transformatie}
 
-TUI maakt gebruik van het \emhp{Strangler pattern} om hun monoliet stapsgewijs te transformeren naar microservices, zie \ref{ch:stand-van-zaken} voor meer informatie.
+TUI maakt gebruik van het \emph{Strangler pattern} om hun monoliet stapsgewijs te transformeren naar microservices, zie \ref{ch:stand-van-zaken} voor meer informatie.
 
 Een voorbeeld hiervan is het loskoppelen van de service die informatie biedt aan \emph{Online Travel Agents} van de API.
 
 In de monoliet is deze service onderdeel van de API. Dit houdt in dat wanneer er een aanpassing nodig was specifiek voor \emph{Online Travel Agents}, het volledige deploy proces van de API uitgevoerd moest worden.
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[height=9cm]{tuiflow.png}
+    \caption{Tui monoliet \label{tuiflow}}
+\end{figure}
 
+In een microservice architectuur is deze service los gekoppeld van de API. De service bestaat uit een API \emph{gateway} en verschillend lambda's. Deze service heeft ook een afzonderlijke \emph{pipeline} voor \emph{deployment}. In de monoliet werd enkel PHP gebruikt voor deze service. Voor de microservice wordern er verschillende technologieën en frameworks gebruikt. Om de AWS services automatisch te creëren wordt er gebruikt gemaakt van Terraform. De lambda's zijn geschreven in nodeJS of Python. 
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[height=10cm]{OTA.png}
+    \caption{Tui microservice \label{tuimicro}}
+\end{figure}
 
+Een tweede voorbeeld hiervan is een \emph{micro-frontend}. De oorspronkelijke website was ontwikkeld in Drupal 7. Tijdens de transformatie werd er gekozen om de website te maken in Hybris aangevuld door React componenten. De reacten componenten werden uiteindelijk opgesplitst in micro-frontends. Dit voorbeeld gaat over het prijs overzicht die de klant te zien krijgt. Deze component is groot genoeg om zelfstandig te functioneren. 
 
+In de oorspronkelijke website was deze module een onderdeel van de website, wat ervoor zorgde dat bij een verandering aan dit component, de volledige website \emph{gedeployed} moest worden.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[height = 10cm]{priceSummary-legacy.png}
+    \caption{Prijs ovezicht in de monoliet \label{pricelegacy}}
+\end{figure}
+
+Als micro-frontend is deze component los gekoppeld van de website en functioneert als een zelfstandig, geisoleerd element. Ook deze micro-frontend wordt gehost op AWS en gebruikt meerdere technologieëen. React, Javascript en Terraform.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[height = 10cm]{PriceSummaryMicro.jpg}
+    \caption{Prijs ovezicht als mircro-frontend \label{pricemicro}}
+\end{figure}
+
+\subsection{Gevolgen}
+
+Financieel wordt er heel wat geinvesteerd in het concept van microservices en of de transformatie een succes wordt, is nog niet geweten. Deze overgang vond plaats tijdens covid-19 epidemie en de verkoop van TUI lag zo goed als stil. In theorie zou deze overgang naar microservices TUI sterker moeten maken. Het zou hun online platform een boost kunnen geven op vlak van flexbiliteit en schaalbaarheid. Voorlopig is dit nog niet het geval. De kwaliteit van de website is anno 2021 slechter dan voorheen. Een grote factor hiervan is het mismanagement van resources. Er werd gekozen voor quantiteit en opleveringsnelheid. Het gevolg is dat er een financiële krater is.
+
+De vertrekkende programmeurs werden vervangen door consultants van India en Oekraine. Opnieuw kwantiteit boven kwaliteit. Het gevolg is dat de werknemers zich niet meer verbonden voelen met het bedrijf.
+
+De vrijheid in keuze van technologie die microservice biedt, geven meer mogelijkheden. Dit is een stap vooruit, maar het gebruik ervan is nog niet optimaal. 
+
+In theorie is een microservice-architectuur de beste keuze voor TUI. Maar het overgangsproces loopt niet zo vlot als verwacht en er is nog lange weg te gaan.
