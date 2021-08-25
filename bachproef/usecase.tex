@@ -5,10 +5,44 @@
 \chapter{usecase}
 \label{ch:usecase}
 
-%% TODO: Hoe ben je te werk gegaan? Verdeel je onderzoek in grote fasen, en
-%% licht in elke fase toe welke stappen je gevolgd hebt. Verantwoord waarom je
-%% op deze manier te werk gegaan bent. Je moet kunnen aantonen dat je de best
-%% mogelijke manier toegepast hebt om een antwoord te vinden op de
-%% onderzoeksvraag.
-
 \section{Inleiding}
+
+In dit hoofdstuk wordt er aan de hand van verzamelde kennis en het vooropstelde model een bedrijfssituatie geanalyseren en besproken. Het bedrijf dat onder de loep genomen wordt, is TUI. Het bedrijf is al enkele jaren bezig met de overschakeling van een monolithische architectuur naar microservices. 
+
+Eerst bespreken we waarom het bedrijf wilt veranderen van architectuur. Elk bedrijf heeft een ander doel die ze willen verwezenlijken bij een dergelijke transformatie. Het definiëren van dit doel heeft context rond de beslissingen die genomen werden.
+
+Vervolgens wordt het model uit hoofdstuk \ref{ch:model} toegepast en worden de verschillende aspecten van de transformatie geanalyseerd.
+
+Daarna wordt de manier waarop het process verloopt, beschreven. Enkele voorbeelden van microservices worden bekeken en wordt er inzicht gegeven over hoe componenten afgesplitst worden van de monoliet. 
+
+Tenslotte is er een overzicht van de gevolgen van deze transformatie.
+
+\subsection{Doel en verwachtingen van de transformatie}
+
+Zoals eerder vermeld is het doel van elk bedrijf anders. In dit geval is het doel van de transformatie om het online platform van TUI te versterken en flexibeler te maken in de steeds wijzigende toerisme sector. Een bijkomend doel is om de verschillende markten (België, Duitsland, Nederland, Engeland, Zweden) samen te brengen in 1 platform. TUI heeft namelijk voor elke land een apart systeem, website en database. Het is dus niet enkel een transformatie van een monolithische architectuur naar microservices, maar het is ook de bedoeling dat verschillende systemen samengevoegd worden tot één geheel. In andere worden is het de bedoeling om meerder monolieten te transformeren tot 1 geheel van microservices.  
+
+\subsection{Toepassing van het model}
+
+Volgens het model wordt de impact opgedeeld in 5 pijlers:
+
+\begin{itemize}
+    \item \textbf{Tijd}: Het project is begonnen in 2020 en is nog altijd bezig. De eerste mijlsteen werd afgeleverd in 2021 en de tweede mijlsteen is voorzien begin 2022. Er is nog geen eind in zicht voor de transformatie. Er zijn doelen opgesteld maar nog geen enkel doel werd op tijd opgeleverd. Dit is geen uitzondering voor projecten van deze omvang en complexiteit, maar dit zorgt voor veel extra kosten die niet voorzien waren. Arbeidscontracten die niet voorzien zijn op vertragingen, kunnen heel wat roet in het eten gooien. 
+    \item \textbf{Loonkost}: In 2021 waren er meer dan 70 mensen die werkten aan de transformatie. Dit zijn ontwikkelaars, testers, \emph{product owners}, ... . Omdat de personen die mee werken aan het project afkomstig zijn uit verschillende landen, is het onmogelijk om precies te weten wat de totale loonkost is. 
+    \item \textbf{Infrastructuur} : Elke markt heeft zijn eigen infrastructuur. Na de transformatie zou het merendeel gebruik moet maken van de AWS services. Uiteindelijk zou dit de kosten moeten verlagen. Mits er pas overgeschakeld wordt naar het nieuwe systeem na de transformatie, is er tijdens het project een overlap. Zolang het nieuwe systeem niet klaar is, moet het huidige systeem werkend blijven. Dit zorgt voor extra kosten tijdens het project.
+    \item \textbf{Personeel} : De transformatie heeft ook een hele grote impact op het personeel. Nationale teams werden internationale teams. Verschillende culturen in 1 team is niet altijd even simpel. Het uur verschil tussen de Europese landen en India zorgt voor extra drempel. Sommige personeelsleden voelden zich niet meer thuis in deze situatie en kozen voor een nieuwe uitdaging. 
+    \item \textbf{Activiteiten} : Voor de transformatie bestonden de meeste activiteiten uit onderhoudstaken voor het \emph{legacy} systeem. Het personeel dat ingezet wordt op de transformatie ontwikkelen microservices. Dit is een groot contrast met de originele activiteiten. Voor sommige personen was dit een verbetering, voor anderen minder zo.
+    
+\end{itemize}
+
+\subsection{Verloop van de transformatie}
+
+TUI maakt gebruik van het \emhp{Strangler pattern} om hun monoliet stapsgewijs te transformeren naar microservices, zie \ref{ch:stand-van-zaken} voor meer informatie.
+
+Een voorbeeld hiervan is het loskoppelen van de service die informatie biedt aan \emph{Online Travel Agents} van de API.
+
+In de monoliet is deze service onderdeel van de API. Dit houdt in dat wanneer er een aanpassing nodig was specifiek voor \emph{Online Travel Agents}, het volledige deploy proces van de API uitgevoerd moest worden.
+
+
+
+
+
