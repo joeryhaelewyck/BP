@@ -13,7 +13,7 @@ In dit hoofdstuk wordt de huidige toestand van monolithische en microservice-arc
 \section{Microservice-architectuur}
 
 \subsection{Service oriented architecture}
-De term Service Oriented Architecture of SOA wordt vaak vermeld tijdens het bespreken van microservices. De twee architecturen hebben heel wat gemeenschappelijk maar er zijn toch wat verschillen. Om die reden wordt er eerst uit geklaard wat deze verschillen zijn en welke aspecten de architecturen delen. 
+De term Service Oriented Architecture of SOA wordt vaak vermeld tijdens het bespreken van microservices. De twee architecturen hebben heel wat gemeenschappelijk maar er zijn toch wat verschillen. Om die reden wordt er eerst uitgeklaard wat deze verschillen zijn en welke aspecten de architecturen delen. 
 
 Het onderzoek van ~\autocite{Schaik2014} leert ons dat SOA een manier definieert om softwarecomponenten herbruikbaar te maken via service-interfaces. Deze interfaces maken gebruik van gemeenschappelijke communicatiestandaarden. Hierdoor is het mogelijk om de services snel op te nemen in nieuwe applicaties zonder elke keer een zware integratie uit te voeren. 
 
@@ -53,12 +53,12 @@ Om de impact te berekenen van de transformatie is het belangrijk dat de voordele
 \textbf{Design}\\ 
 Tijdens het design van een microservice-architectuur kunnen er al tal van voordelen genoteerd worden. Het ontwikkelen van deze architectuur zorgt ervoor dat men stil staat bij de scope van het project.\\ 
 Een goed afgebakend project geeft een goed overzicht van de noden weer. Veel microservices maken gebruik van Cloud native computing wat meer flexibiliteit biedt. Microservices passen gedecentraliseerd beheer toe, wat betekent dat het development team de code kan ontwikkelen volgens hun individuele beheersplannen.\\ 
-Het systeem zal ook zodanig ontwikkeld worden zodat wanneer een component uitvalt het systeem verder blijft werken. Deze eigenschap heet fouttolerantie. Een bijhorende patroon is het gebruik van een 'circuit breaker'. Deze service handelt fouten af die ontstaan bij het aanspreken van andere services.\\
-Iedere service bevat zijn eigen database. Dit helpt mee aan de 'loosely coupled' strategie, veranderingen aan 1 database beïnvloedt de andere databases niet.\\
+Het systeem zal ook zodanig ontwikkeld worden dat wanneer een component uitvalt het systeem verder blijft werken. Deze eigenschap heet fouttolerantie. Een bijhorende patroon is het gebruik van een 'circuit breaker'. Deze service handelt fouten af die ontstaan bij het aanspreken van andere services.\\
+Iedere service bevat zijn eigen database. Dit helpt mee aan de 'loosely coupled' strategie, veranderingen aan één database beïnvloeden de andere databases niet.\\
 Services met gemeenschappelijke doeleinden kunnen gegroepeerd worden, hierdoor ontstaan 'lagen' van
 componenten. Dit biedt de mogelijkheid om logica te hergebruiken en te isoleren.\\ \\
-\textbf{Development}\\ Eén van de grote voordelen van het ontwikkelen van microservices is dat developers zich kunnen concentreren op een service per keer. Ze hebben de vrijheid om te kiezen welke technologie ze willen gebruiken. Het is perfect mogelijk om 10 verschillende componenten in 10 verschillende technologieën te ontwikkelen. Natuurlijk moet er een consensus zijn over wat er wel of niet gebruikt mag worden. Bepaalde logica kan hergebruikt worden in meerdere services of een service kan verschillende componenten voeden waardoor veel werk herbruikbaar is. \\
-Het ontwikkelen van integratie testen gaat ook sneller dankzij de kleinschalige componenten. Dependenties met andere services kunnen makkelijk opgevangen worden met Mocks.\\
+\textbf{Development}\\ Eén van de grote voordelen van het ontwikkelen van microservices is dat developers zich kunnen concentreren op één service per keer. Ze hebben de vrijheid om te kiezen welke technologie ze willen gebruiken. Het is perfect mogelijk om 10 verschillende componenten in 10 verschillende technologieën te ontwikkelen. Natuurlijk moet er een consensus zijn over wat er wel of niet gebruikt mag worden. Bepaalde logica kan hergebruikt worden in meerdere services of een service kan verschillende componenten voeden waardoor veel werk herbruikbaar is. \\
+Het ontwikkelen van integratietesten gaat ook sneller dankzij de kleinschalige componenten. Dependenties met andere services kunnen makkelijk opgevangen worden met Mocks.\\
 \textbf{Deployment}\\ Door gebruik te maken van microservices kan een onderneming kiezen om meerdere pipelines te gebruiken om een project in productie te plaatsen. Een pipeline per services is geen uitzondering. Hierdoor is de CI/CD van het project veel robuuster en zijn fouten sneller op te lossen.
 
 \begin{figure}[!htb]
@@ -76,9 +76,9 @@ Elke software architectuur heeft zijn uitdagingen of pijnpunten. Voor microservi
 
 \textbf{Design} \\De API die geleverd wordt door een microservice wordt een soort contract tussen degelijke microservices en degenen die de API consumeren. Deze contracten zijn bindend en mogen niet geschonden worden. Dit heeft een negatieve impact op de versiebeheer van de API's geleverd door de microservices.\\    Toegangscontrole kan snel uit de hand lopen bij microservices. Elke service heeft zijn eigen noden en veel tools bieden enkel een gecentraliseerd beheer van accounts aan.\\    Microservices stellen meer API's bloot en distribueren authenticatie en toegangscontrole. Het oppervlak dat kwetsbaar is, is dus veel uitgebreider en dit is de belangrijkste reden waarom proliferatie van eindpunten significant wordt herkend als een pijnpunt door industriële onderzoekers en praktijkmensen.\\  \\
 \textbf{Development} \\ Als de opslagruimte gedeeld moet worden tussen de verschillende microservices, wordt het lastig om gegevensconsistentie te waarborgen. Dit is zeker het geval wanneer gevoelige data zoals contactgegevens gebruikt wordt over meerdere services.\\
-Door de technische heterogeniteit kunnen verschillende technologieën gebruikt worden. Indien dit het geval is, dan is er een team van bekwamene medewerkers nodig om de grote heterogene gedistribueerde software te ondersteunen. Dit brengt een grote financiële kost met zich mee.\\
-Het development team kan geografisch verspreid zijn. Componenten van de applicatie kunnen dus beheerd worden in verschillende landen. Dit vermoeilijkt de communicatie en vertraagt het ontwikkelingsproces.\\
-De communicatie tussen de verschillende services gebeurd over een netwerk. Dit zorgt ervoor dat de services afhankelijk zijn van dit netwerk.\\ \\
+Door de technische heterogeniteit kunnen verschillende technologieën gebruikt worden. Indien dit het geval is, dan is er een team van bekwame medewerkers nodig om de grote heterogene gedistribueerde software te ondersteunen. Dit brengt een grote financiële kost met zich mee.\\
+Het development team kan geografisch verspreid zijn. Componenten van de applicatie kunnen dus beheerd worden in verschillende landen. Dit bemoeilijkt de communicatie en vertraagt het ontwikkelingsproces.\\
+De communicatie tussen de verschillende services gebeurdt over een netwerk. Dit zorgt ervoor dat de services afhankelijk zijn van dit netwerk.\\ \\
 \textbf{Deployment} \\ Elke service zal zelf een logboek bijhouden, hierdoor moet er een extra service gecreëerd worden om alles logs te verzamelen in een overzicht.\\
 De grootte en complexiteit van het implementatieproces kan voor sommige bedrijven een obstakel vormen.
 
@@ -116,7 +116,7 @@ Dit patroon is toepasbaar wanneer elke service over zijn eigen database beschikt
 \end{figure}
 
 \textbf{Circuit Breaker}\\
-Het idee achter de 'Circuit Breaker' is relatief eenvoudig. Net zoals een elektrische stroomonderbreker zal de service tijdelijk uitgeschakeld worden als er teveel fouten geregistreerd worden. In deze periode zullen alle pogingen om de service aan te roepen mislukken. Na deze periode zal de 'stroomonderbreker' een aantal verzoeken aanvaarden en controleren of de verzoeken slagen. Als deze controle succesvol is dat wordt de service hervat, zo niet dan blijft de 'stroomonderbreker' actief.
+Het idee achter de 'Circuit Breaker' is relatief eenvoudig. Net zoals een elektrische stroomonderbreker zal de service tijdelijk uitgeschakeld worden als er te veel fouten geregistreerd worden. In deze periode zullen alle pogingen om de service aan te roepen mislukken. Na deze periode zal de 'stroomonderbreker' een aantal verzoeken aanvaarden en controleren of de verzoeken slagen. Als deze controle succesvol is, wordt de service hervat, zo niet blijft de 'stroomonderbreker' actief.
 Er zijn drie toestanden: gesloten, half-open en open. In de gesloten toestand werkt alles zoals het hoort, zie figuur~\ref{gesloten}. 
 
 \begin{figure}[!htb]
@@ -141,7 +141,7 @@ Na een bepaalde tijd schakelt het circuit over naar een half-open toestand, zie 
 \end{figure}
 
 \textbf{Distributed Tracing}
-Tracering is een fundamenteel proces in software-engineering, dat door programmeurs samen met andere vormen van registreren wordt gebruikt om informatie te verzamelen over het gedrag van een applicatie. Maar traditionele tracering stuit op problemen wanneer het wordt gebruikt om problemen op te lossen met applicaties die zijn gebouwd op een gedistribueerde softwarearchitectuur. Omdat microservices onafhankelijk schaalbaar zijn, is het gebruikelijk dat meerdere iteraties van een enkele service tegelijkertijd op verschillende servers, locaties en omgevingen worden uitgevoerd, waardoor een complex web ontstaat waar een verzoek doorheen moet. Deze verzoeken zijn bijna onmogelijk te volgen met traditionele technieken die zijn ontworpen voor een enkele servicetoepassing.
+Tracering is een fundamenteel proces in software-engineering, dat door programmeurs samen met andere vormen van registreren wordt gebruikt om informatie te verzamelen over het gedrag van een applicatie. Traditionele tracering stuit echter op problemen wanneer het wordt gebruikt om problemen op te lossen met applicaties die zijn gebouwd op een gedistribueerde softwarearchitectuur. Omdat microservices onafhankelijk schaalbaar zijn, is het gebruikelijk dat meerdere iteraties van een enkele service tegelijkertijd op verschillende servers, locaties en omgevingen worden uitgevoerd, waardoor een complex web ontstaat waar een verzoek doorheen moet. Deze verzoeken zijn bijna onmogelijk te volgen met traditionele technieken die zijn ontworpen voor een enkele servicetoepassing.
 \\
 Gedistribueerde traceringsoplossingen lossen dit probleem en tal van andere prestatieproblemen op, omdat het verzoeken via elke service of module kan volgen en een end-to-end narratief verslag van dat verzoek kan bieden. Analisten, SRE's, ontwikkelaars en anderen kunnen elke iteratie van een functie observeren, waardoor ze prestatiebewaking kunnen uitvoeren door te zien welke instantie van die functie ervoor zorgt dat de app vertraagt of faalt, en hoe ze dit kunnen oplossen. Zie figuur~\ref{distributed}
 
@@ -182,7 +182,7 @@ De kernideeën achter Micro frontends:
 \newpage
 \subsection{Mono- en polyrepo}
 Wanneer alle code in één en dezelfde repository bijgehouden wordt, spreken we over een monorepo. De apps zijn dan onderverdeeld in verschillende subfolders. Deze structuur komt in veel projecten voor. Code in deze structuur heeft meestal één pipeline voor de implementatie. Dit zorgt voor een eenvoudige onderhoud, maar een enkele bug kan het hele proces vertragen.\\ 
-Wanneer de code opgedeeld wordt in verschillende repositories, spreken we over een polyrepo. Een project is dan verspreid over meerdere bronnen. Dit heeft tal van voordelen maar brengt ook wat nadelen met zich mee.\\
+Wanneer de code opgedeeld wordt in verschillende repositories, spreken we over een polyrepo. Een project is dan verspreid over meerdere bronnen. Dit heeft verscheidene voordelen maar brengt ook wat nadelen met zich mee.\\
 Volgens het onderzoek van ~\autocite{Powell2021} delen bedrijven die gebruik maken van microservices hun code op in verschillende repositories (polyrepos). De teams ontwikkelen hun services onafhankelijk van elkaar en bij gevolg gebruiken ze dus hun eigen repo. De voordelen van deze structuur zijn duidelijk. Een klein team kan snel en zonder restricties hun eigen code in productie plaatsen.\\  
 Het nadeel is dat alle kennis verspreid is over verschillende repos, in het slechtste geval kom je op een punt waarbij niemand meer weet hoe het volledige systeem opgebouwd en geïmplementeerd wordt. Bij een slechte implementatie kunnen er ook \emph{dependencies} ontstaan tussen de verschillende repos. \\
 \\
@@ -209,7 +209,7 @@ Beide strategieën hebben hun voor- en nadelen, er is geen winnaar. Het team kie
 
 \newpage
 \section{Monolithische architectuur}
-Volgens de blog van ~\autocite{Monolith2014} betekent dat een monololitische architectuur samengesteld is uit één stuk. De Monololitisch applicatie beschrijft een softwareapplicatie waarin verschillende componenten worden gecombineerd tot een enkel programma vanaf een enkel platform. De volgende componenten kunnen voorkomen:
+Volgens de blog van Annett ~\autocite{Monolith2014} is een monololitische architectuur samengesteld is uit één stuk. De Monololitisch applicatie beschrijft een softwareapplicatie waarin verschillende componenten worden gecombineerd tot een enkel programma vanaf één enkel platform. De volgende componenten kunnen voorkomen:
 \begin{itemize}
     \item Authorisatie
     \item Presentatie
