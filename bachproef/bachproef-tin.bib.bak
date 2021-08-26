@@ -81,6 +81,7 @@
   author = {Olaf Zimmermann},
   date   = {2016-11-01},
   title  = {Microservices Tenets: Agile Approach to Service Development and Deployment},
+  file   = {:zimmer.pdf:PDF},
 }
 
 @Conference{Cockcroft2014,
@@ -112,11 +113,12 @@
   url    = {https://www.ibm.com/cloud/learn/soa},
 }
 
-@Article{Geers,
+@Article{Geers2020,
   author       = {Michael Geers},
   date         = {2020-06-01},
   journaltitle = {extending the microservice idea to frontend development},
   title        = {Micro Frontends},
+  url          = {https://micro-frontends.org/},
 }
 
 @WWW{Powell2021,
@@ -137,6 +139,28 @@
   date   = {2020},
   editor = {Elissa Verjans},
   title  = {Impact een introductie in sociale impactmeting},
+}
+
+@Article{Tilkov2015,
+  author = {Stefan Tilkov},
+  date   = {2015-06-09},
+  title  = {Don't start with a monolith},
+  url    = {https://martinfowler.com/articles/dont-start-monolith.html},
+}
+
+@Thesis{Schaik2014,
+  author      = {I.H. van Schaik},
+  date        = {2014-08-01},
+  institution = {Erasmus Universiteit Rotterdam},
+  title       = {Weerstand bij verandering},
+  file        = {:weerstand.pdf:PDF},
+}
+
+@WWW{Kappaggantula2020,
+  author = {Sahiti Kappaggantula},
+  date   = {2020-11-25},
+  title  = {Everything you need to know about microservices design patterns},
+  url    = {https://www.edureka.co/blog/microservices-design-patterns},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

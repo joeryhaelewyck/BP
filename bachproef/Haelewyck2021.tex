@@ -8,8 +8,9 @@
 \usepackage{hogent-thesis-titlepage} % Titelpagina conform aan HOGENT huisstijl
 \usepackage[utf8]{inputenc}
 \usepackage{glossaries}
-\makeglossaries
-\newglossaryentry{dansen}{name={dansen},description={jajajajaja}}
+\usepackage[backend=biber,style=apa]{biblatex}
+\DeclareLanguageMapping{dutch}{dutch-apa}
+\addbibresource{bachproef-tin}
 %%---------- Documenteigenschappen ---------------------------------------------
 % TODO: Vul dit aan met je eigen info:
 
@@ -29,7 +30,7 @@
 % Indien je bachelorproef in opdracht van/in samenwerking met een bedrijf of
 % externe organisatie geschreven is, geef je hier de naam. Zoniet laat je dit
 % zoals het is.
-\instelling{---}
+\instelling{TUI}
 
 % Academiejaar
 \academiejaar{2020-2021}
@@ -97,15 +98,6 @@
 \input{methodologie}
 \input{model}
 \input{usecase}
-
-% Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
-% vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
-% elke fase in je onderzoek in een apart hoofdstuk bespreken.
-
-%\input{...}
-%\input{...}
-%...
-
 \input{conclusie}
 
 %%=============================================================================
@@ -129,6 +121,6 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 %\input{...}
 
 %%---------- Referentielijst --------------------------------------------------
-
+\printbibliography[heading=bibintoc]
 
 \end{document}

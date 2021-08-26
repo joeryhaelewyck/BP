@@ -13,11 +13,11 @@ In dit hoofdstuk wordt de huidige toestand van monolithische en microservice-arc
 \section{Microservice-architectuur}
 
 \subsection{Service oriented architecture}
-De term Service oriented architecture of SOA wordt vaak vermeld tijdens het bespreken van microservices. De twee architecturen hebben heel wat gemeenschappelijk maar er zijn toch wat verschillen. Daarom wordt er eerst uit geklaard wat deze verschillen zijn en welke aspecten de architecturen delen. 
+De term Service Oriented Architecture of SOA wordt vaak vermeld tijdens het bespreken van microservices. De twee architecturen hebben heel wat gemeenschappelijk maar er zijn toch wat verschillen. Om die reden wordt er eerst uit geklaard wat deze verschillen zijn en welke aspecten de architecturen delen. 
 
-SOA definieert een manier om softwarecomponenten herbruikbaar te maken via service-interfaces. Deze interfaces maken gebruik van gemeenschappelijke communicatiestandaarden. Hierdoor is het mogelijk om de services snel op te nemen in nieuwe applicaties zonder elke keer een zware integratie uit te voeren.
+Het onderzoek van ~\autocite{Schaik2014} leert ons dat SOA een manier definieert om softwarecomponenten herbruikbaar te maken via service-interfaces. Deze interfaces maken gebruik van gemeenschappelijke communicatiestandaarden. Hierdoor is het mogelijk om de services snel op te nemen in nieuwe applicaties zonder elke keer een zware integratie uit te voeren. 
 
-Iedere service vertegenwoordigt een business gerelateerd aspect. De service bevat de code en de nodige gegevensintegraties om het functionele aspect volledig en zelfstandig uit te voeren. Bijvoorbeeld het afhandelen van een betaling.\\
+Iedere service vertegenwoordigt een business gerelateerd aspect. De service bevat de code en de nodige gegevensintegraties om het functionele aspect volledig en zelfstandig uit te voeren, bijvoorbeeld het afhandelen van een betaling.\\
 
 \begin{figure}[!htb]
     \includegraphics[width=0.95\textwidth]{Microservices_vs_mono.png}
@@ -28,19 +28,19 @@ Iedere service vertegenwoordigt een business gerelateerd aspect. De service beva
 
 De service-interfaces zorgen voor een losse koppeling waardoor ze aangesproken kunnen worden met weinig of geen kennis van het onderliggend systeem. De services worden weergegeven met behulp van de standaard netwerkprotocollen zoals SOAP.
 
-Ten opzichte van de standaard architecturen die SOA voorgingen (zoals de monoliet) bied het tal van voordelen:
+Ten opzichte van de standaard architecturen die SOA voorgingen (zoals de monoliet), biedt het tal van voordelen:
 \begin{itemize}
      \item \textbf{Flexibiliteit}: De mogelijkheid om componenten te hergebruiken zorgt ervoor dat een onderneming zich flexibeler kan opstellen en sneller kan reageren op marktsveranderingen. 
      \item \textbf{De mogelijkheid om legacy functionaliteit te integreren in nieuwe markten}: SOA biedt de mogelijkheid om functionaliteit van oude systemen te integreren naar nieuwe systemen.
      \item \textbf{Een betere connectie tussen IT en business}: In een SOA architectuur kunnen de services gedefinieerd worden als business termen. Hierdoor kunnen de analisten efficiënter werken en sneller de developers aanspreken. De scope van de services zijn ook makkelijker te definiëren.
 \end{itemize} 
 
-Veel experten beweren dat microservices de volgende stap is in de evolutie van SOA of dat het de correctie implementatie is van SOA. Er zijn tal van studies die deze twee architecturen vergelijken, maar voor dit onderzoek bespreken we enkel het verschil tussen de scope en de koppeling van de componenten. \autocite{Education2019}
+Veel experten beweren dat microservices-architectuur de volgende stap is in de evolutie van SOA of dat het de correctie implementatie is van SOA. Er zijn tal van studies die deze twee architecturen vergelijken, maar voor dit onderzoek bespreken we enkel het verschil tussen de scope en de koppeling van de componenten. \autocite{Education2019}
 
 
 SOA is een ondernemingsbreed concept. Het maakt het mogelijk om bestaande applicaties weer te geven via los gekoppelde interfaces, die elk verantwoordelijk zijn voor een bedrijfsfunctie, waardoor de applicaties een onderdeel vormen van een groot geheel. Vaak zijn deze componenten verbonden aan de hand van een integratie bus.
 
-Microservices-architectuur is een concept met toepassingsbereik. Het splits de applicatie op in kleine onderdelen die onafhankelijk gewijzigd, geschaald en beheerd kunnen worden. Het definieert niet hoe applicaties met elkaar communiceren.
+Microservices-architectuur is een concept met toepassingsbereik. Het splitst de applicatie op in kleine onderdelen die onafhankelijk gewijzigd, geschaald en beheerd kunnen worden. Het definieert niet hoe applicaties met elkaar communiceren.
 \begin{figure}[!htb]
     \includegraphics[width=1\textwidth]{Evolution-of-Software-architectur.png}
     \caption{Evolutie van software architectuur \label{evolution}}
@@ -48,18 +48,17 @@ Microservices-architectuur is een concept met toepassingsbereik. Het splits de a
 
 
 \subsection{Voordelen}
-Om de impact te berekenen van de transformatie is het belangrijk dat de voordelen van een microservice architectuur gekend zijn. Om een standaard opsomming te vermijden en meer structuur te brengen in deze lijst, worden de voordelen onderverdeeld in 3 categorieen. In eerste instantie worden de voordelen besproken die horen bij het \underline{design} van mircoservices, vervolgens komt het gedeelte van de \underline{development} aan bod en tenslotte de \underline{deployment}.\\
+Om de impact te berekenen van de transformatie is het belangrijk dat de voordelen van een microservice architectuur gekend zijn. Om een algemene opsomming te vermijden en meer structuur te brengen in deze lijst, worden de voordelen onderverdeeld in 3 categorieën . In eerste instantie worden de voordelen besproken die horen bij het \underline{design} van mircoservices, vervolgens komt het gedeelte van de \underline{development} aan bod en tenslotte de \underline{deployment}.\\
 
 \textbf{Design}\\ 
-Tijdens de design van een microservice-architectuur kunnen er al tal van voordelen genoteerd worden. Het ontwikkelen van deze architectuur zorgt ervoor dat men stil staat bij de scope van het project.\\ 
+Tijdens het design van een microservice-architectuur kunnen er al tal van voordelen genoteerd worden. Het ontwikkelen van deze architectuur zorgt ervoor dat men stil staat bij de scope van het project.\\ 
 Een goed afgebakend project geeft een goed overzicht van de noden weer. Veel microservices maken gebruik van Cloud native computing wat meer flexibiliteit biedt. Microservices passen gedecentraliseerd beheer toe, wat betekent dat het development team de code kan ontwikkelen volgens hun individuele beheersplannen.\\ 
-Het systeem zal ook zodanig ontwikkelt worden zodat wanneer een component uitvalt het systeem verder blijft werken. Deze eigenschap heet fouttolerantie. Een bijhorende patroon is het gebruik van een 'circuit breaker'. Deze service handelt fouten af die ontstaan bij het aanspreken van andere services.\\
+Het systeem zal ook zodanig ontwikkeld worden zodat wanneer een component uitvalt het systeem verder blijft werken. Deze eigenschap heet fouttolerantie. Een bijhorende patroon is het gebruik van een 'circuit breaker'. Deze service handelt fouten af die ontstaan bij het aanspreken van andere services.\\
 Iedere service bevat zijn eigen database. Dit helpt mee aan de 'loosely coupled' strategie, veranderingen aan 1 database beïnvloedt de andere databases niet.\\
 Services met gemeenschappelijke doeleinden kunnen gegroepeerd worden, hierdoor ontstaan 'lagen' van
 componenten. Dit biedt de mogelijkheid om logica te hergebruiken en te isoleren.\\ \\
-\textbf{Development}\\ één van de grote voordelen van het ontwikkelen van microservices is dat developers zich kunnen concentreren op een service per keer. Ze hebben de vrijheid om te kiezen welke technologie ze willen gebruiken. Het is perfect mogelijk om 10 verschillende componenten in 10 verschillende technologieën te ontwikkelen. Natuurlijk moet er een consensus zijn over wat er wel of niet gebruikt mag worden. Bepaalde logica kan hergebruikt worden in meerdere services of een service kan verschillende componenten voeden waardoor veel werk herbruikbaar is. \\
+\textbf{Development}\\ Eén van de grote voordelen van het ontwikkelen van microservices is dat developers zich kunnen concentreren op een service per keer. Ze hebben de vrijheid om te kiezen welke technologie ze willen gebruiken. Het is perfect mogelijk om 10 verschillende componenten in 10 verschillende technologieën te ontwikkelen. Natuurlijk moet er een consensus zijn over wat er wel of niet gebruikt mag worden. Bepaalde logica kan hergebruikt worden in meerdere services of een service kan verschillende componenten voeden waardoor veel werk herbruikbaar is. \\
 Het ontwikkelen van integratie testen gaat ook sneller dankzij de kleinschalige componenten. Dependenties met andere services kunnen makkelijk opgevangen worden met Mocks.\\
-Rollbacks zijn beperkter en hebben enkel impact op bepaalde services.\\ \\
 \textbf{Deployment}\\ Door gebruik te maken van microservices kan een onderneming kiezen om meerdere pipelines te gebruiken om een project in productie te plaatsen. Een pipeline per services is geen uitzondering. Hierdoor is de CI/CD van het project veel robuuster en zijn fouten sneller op te lossen.
 
 \begin{figure}[!htb]
@@ -68,16 +67,16 @@ Rollbacks zijn beperkter en hebben enkel impact op bepaalde services.\\ \\
     \caption{grafische vergelijking tussen het release proces van een monoliet en microservices \label{pipelin}}
 \end{figure}
 
-Het beheer van de code wordt ook een stuk eenvoudiger. Het uitvoeren van updates kan beter beheerd worden en geïsoleerd worden van componenten die de update niet nodig hebben.
+Het beheer van de code wordt ook een stuk eenvoudiger. Het uitvoeren van updates kan beter beheerd worden en geïsoleerd worden van componenten die de update niet nodig hebben. Rollbacks zijn beperkter en hebben enkel impact op bepaalde services.
 
 
 \subsection{Pijnpunten}
 
-Elke software architectuur heeft zijn uitdagingen of pijnpunten. Voor microservices is dit niet anders. Net zoals in sectie 1.1.2 verdelen we de nadelen op in 3 categorieën: \underline{design}, \underline{development} en \underline{deployment}.\\ \\
+Elke software architectuur heeft zijn uitdagingen of pijnpunten. Voor microservices is dit niet anders. Net zoals in sectie 2.1.2 verdelen we de nadelen op in 3 categorieën: \underline{design}, \underline{development} en \underline{deployment}.\\ \\
 
-\textbf{Design} \\De API dat geleverd wordt door een microservice wordt een soort contract tussen degelijke microservices en degenen die de API consumeren. Deze contracten zijn bindend en mogen niet geschonden worden. Dit heeft een negatieve impact op de versiebeheer van de API's geleverd door de microservices.\\    Toegangscontrole kan snel uit de hand lopen bij microservices. Elke service heeft zijn eigen noden en veel tools bieden enkel een gecentraliseerd beheer van accounts aan.\\    Microservices stellen meer API's bloot en distribueren authenticatie en toegangscontrole. Het oppervlak dat kwetsbaar is, is dus veel uitgebreider en dit is de belangrijkste reden waarom proliferatie van eindpunten significant wordt herkend als een pijnpunt door industriële onderzoekers en praktijkmensen.\\  \\
+\textbf{Design} \\De API die geleverd wordt door een microservice wordt een soort contract tussen degelijke microservices en degenen die de API consumeren. Deze contracten zijn bindend en mogen niet geschonden worden. Dit heeft een negatieve impact op de versiebeheer van de API's geleverd door de microservices.\\    Toegangscontrole kan snel uit de hand lopen bij microservices. Elke service heeft zijn eigen noden en veel tools bieden enkel een gecentraliseerd beheer van accounts aan.\\    Microservices stellen meer API's bloot en distribueren authenticatie en toegangscontrole. Het oppervlak dat kwetsbaar is, is dus veel uitgebreider en dit is de belangrijkste reden waarom proliferatie van eindpunten significant wordt herkend als een pijnpunt door industriële onderzoekers en praktijkmensen.\\  \\
 \textbf{Development} \\ Als de opslagruimte gedeeld moet worden tussen de verschillende microservices, wordt het lastig om gegevensconsistentie te waarborgen. Dit is zeker het geval wanneer gevoelige data zoals contactgegevens gebruikt wordt over meerdere services.\\
-Door de technische heterogeniteit kunnen verschillende technologieën gebruikt worden. Indien dit het geval is, dan is er een enorme reeks bekwame werknemers nodig om de grote heterogene gedistribueerde software te ondersteunen. Dit brengt een grote financiële kost met zich mee.\\
+Door de technische heterogeniteit kunnen verschillende technologieën gebruikt worden. Indien dit het geval is, dan is er een team van bekwamene medewerkers nodig om de grote heterogene gedistribueerde software te ondersteunen. Dit brengt een grote financiële kost met zich mee.\\
 Het development team kan geografisch verspreid zijn. Componenten van de applicatie kunnen dus beheerd worden in verschillende landen. Dit vermoeilijkt de communicatie en vertraagt het ontwikkelingsproces.\\
 De communicatie tussen de verschillende services gebeurd over een netwerk. Dit zorgt ervoor dat de services afhankelijk zijn van dit netwerk.\\ \\
 \textbf{Deployment} \\ Elke service zal zelf een logboek bijhouden, hierdoor moet er een extra service gecreëerd worden om alles logs te verzamelen in een overzicht.\\
@@ -85,11 +84,11 @@ De grootte en complexiteit van het implementatieproces kan voor sommige bedrijve
 
 \subsection{Toepassingen en design patterns}
 
-Er zijn heel wat design patterns die gebruikt kunnen worden om de microservice architectuur te verwezelijken, zie figuur \ref{overzicht} . Om de scope van deze studie te beperken zullen we ze niet allemaal behandelen.\\ \\
+Er zijn heel wat design patterns die gebruikt kunnen worden om de microservice architectuur te verwezelijken, zie figuur \ref{overzicht} . Om de scope van deze studie te beperken zullen we ze niet allemaal behandelen. Het werk van ~\autocite{Richardson2021} werd gebruikt als inspiratiebron.\\ \\
 \textbf{Aggregator Pattern}\\
-Aggregator verwijst naar een website of programma dat gerelateerde gegevens verzamelt en weergeeft. In Microservices-patronen is Aggregator een basiswebpagina die verschillende services oproept om de vereiste informatie te verkrijgen of de correcte functionaliteit aan te bieden.\\
-Het Aggregate Design Pattern is gebaseerd op het DRY-principe. Op basis van dit principe wordt de logica geabstraheerd in samengestelde microservices om daarna deze specifieke bedrijfslogica samen te voegen tot één service.
-Bijvoorbeeld: twee services A en B kunnen afzonderlijk gelijktijdig geschaald worden door de gegevens aan de samengestelde microservice te verstrekken.
+Aggregator verwijst naar een website of programma dat gerelateerde gegevens verzamelt en weergeeft. In Microservices-patronen is Aggregator een basiswebpagina die verschillende services oproept om de vereiste informatie te verkrijgen of om de correcte functionaliteit aan te bieden.\\
+Het Aggregate Design Pattern is gebaseerd op het DRY-principe. Op basis van dit principe wordt de logica geabstraheerd in samengestelde microservices om daarna deze specifieke bedrijfslogica samen te voegen tot één service. ~\autocite{Kappaggantula2020} \\
+Bijvoorbeeld: twee services A en B kunnen afzonderlijk gelijktijdig geschaald worden door de gegevens aan de samengestelde microservice te verstrekken, zie figuur ~\ref{aggragator} . \\ \\
 
 \begin{figure}[!htb]
     \centering
@@ -98,7 +97,7 @@ Bijvoorbeeld: twee services A en B kunnen afzonderlijk gelijktijdig geschaald wo
 \end{figure}
 
 \textbf{Strangler Pattern}\\
-De strangler pattern is een manier om een legacy systeem stapsgewijs te migreren door bestaande functionaliteiten te vervangen door nieuwe applicaties en diensten in een gefaseerde aanpak. Over tijd zal het nieuwe systeem alle functionaliteit van het oude systeem bevatten en bijgevolg het systeem vervangen.
+De strangler pattern is een manier om een legacy systeem stapsgewijs te migreren door bestaande functionaliteiten te vervangen door nieuwe applicaties en diensten in een gefaseerde aanpak. Over tijd zal het nieuwe systeem alle functionaliteit van het oude systeem bevatten en bijgevolg het systeem vervangen, zie figuur ~\ref{stangler} .
 
 \begin{figure}[!htb]
     \centering
@@ -108,7 +107,7 @@ De strangler pattern is een manier om een legacy systeem stapsgewijs te migreren
 
 \textbf{Saga Pattern}
 \\Een saga is een opeenvolging van lokale transacties. Elke lokale transactie werkt de database bij en publiceert een bericht of gebeurtenis om de volgende lokale transactie in de saga te activeren. Als een lokale transactie mislukt, voert de saga een rollback uit.\\
-Dit patroon is toepasbaar wanneer elke service over zijn eigen database beschikt.
+Dit patroon is toepasbaar wanneer elke service over zijn eigen database beschikt, zie figuur ~\ref{Saga} . \\ \\
 
 \begin{figure}[!htb]
     \centering
@@ -129,7 +128,7 @@ Er zijn drie toestanden: gesloten, half-open en open. In de gesloten toestand we
 Zodra het aantal storingen een vooraf bepaalde drempel overschrijdt, schakelt de stroomonderbreker uit en gaat deze in de open toestand, zie figuur~\ref{open}.
 \begin{figure}[!htb]
     \centering
-    \includegraphics[height=11cm]{open.png}
+    \includegraphics[height=10cm]{open.png}
     \caption{Open status \label{open}}
 \end{figure}
 
@@ -153,20 +152,20 @@ Gedistribueerde traceringsoplossingen lossen dit probleem en tal van andere pres
 \end{figure}
 \begin{figure}[!htb]
     \centering
-    \includegraphics[height=11cm]{DesignPatterns.png}
+    \includegraphics[height=10cm]{DesignPatterns.png}
     \caption{Overzicht Design Patterns \label{overzicht}}
 \end{figure}
 \newpage
 \subsection{Micro Frontends}
 Een volgende stap is om het concept van micro services toe te passen op de frontend. De huidige trend in web ontwikkeling zijn single page applicaties. De bekendste en meeste gebruikte SPA frameworks zijn React, Angular en Vue. In vele gevallen wordt de frontend onderhouden door één afzonderlijk team. Hierdoor groeit de frontend laag geleidelijk aan in een groot project, ook wel een frontend monoliet genoemd.\\\\
-Het idee achter de Micro frontends is om de website op te delen op basis van features en met behulp van compositie de verschillende delen samen te brengen in een werkende website. In theorie worden de features onderhouden door onafhankelijke teams. Elk team is verantwoordelijk voor zijn feature. De teams hebben een bepaald doel en dat doel is meestal gekoppeld aan een business requirement. Het team ontwikkeld  alles zelfstandig, vanaf het moment de data opgehaald wordt uit de database  tot en met de user interface. In het verleden werden dergelijke benaderingen ‘frontend integratie voor verticale systemen’ genoemd. Micro frontends is bij uitstek de elegantere benaming.
+Het artikel van ~\autocite{Geers2020} leert ons dat het idee achter de Micro frontends is om de website op te delen op basis van features en met behulp van compositie de verschillende delen samen te brengen in een werkende website. In theorie worden de features onderhouden door onafhankelijke teams. Elk team is verantwoordelijk voor zijn feature. De teams hebben een bepaald doel en dat doel is meestal gekoppeld aan een business requirement. Het team ontwikkelt alles zelfstandig, vanaf het moment de data opgehaald wordt uit de database  tot en met de user interface. In het verleden werden dergelijke benaderingen ‘frontend integratie voor verticale systemen’ genoemd. De benaming van microfront ends is eleganter, zie figuur ~\ref{microfrontends} .
 
 De kernideeën achter Micro frontends:
 \begin{itemize}
     \item \textbf{Team code is geïsoleerd} \\
           Elk team heeft zijn eigen stack en pipeline waar hun code gebouwd wordt. Afhankelijkheden op andere teams worden vermeden.
     \item \textbf{Elke team bepaalt hun eigen technologie} \\
-          De teams hebben de vrijheid om de technologie te kiezen die zij wensen te gebruiken. Zonder af te stemmen met andere teams. 
+          De teams hebben de vrijheid om de technologie te kiezen die zij wensen te gebruiken, zonder af te stemmen met andere teams. 
     \item \textbf{Teamvoorvoegsels instellen}\\
           Op plaatsen waar het niet mogelijk is om code te isoleren, moet het duidelijk zijn welk team eigenaar is van de niet geïsoleerde code. Dit kan gerealiseerd worden met naamgevingsconventies.  
     \item \textbf{Verkies browserfuncties boven aangepaste API’s}\\
@@ -174,11 +173,21 @@ De kernideeën achter Micro frontends:
     \item \textbf{Bouw een veerkrachtige website}
           Elke feature moet zijn nut hebben. Als dit niet het geval is, moet de feature verwijderd worden of geabsorbeerd worden in een ander team.\\
 \end{itemize}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[height=10cm, width=15cm]{MicroFrontendsVertical.png}
+    \caption{Evolutie van micro frontends \label{microfrontends}}
+\end{figure}
+
+\newpage
 \subsection{Mono- en polyrepo}
-Wanneer alle code in één dezelfde repository bijgehouden wordt, spreken we over een monorepo. De apps zijn dan onderverdeeld in verschillende subfolders. Deze structuur komt in veel projecten voor. Code in deze structuur heeft meestal één pipeline voor de implementatie. Dit zorgt voor een eenvoudige onderhoud, maar een enkele bug kan het hele proces vertragen.\\ 
+Wanneer alle code in één en dezelfde repository bijgehouden wordt, spreken we over een monorepo. De apps zijn dan onderverdeeld in verschillende subfolders. Deze structuur komt in veel projecten voor. Code in deze structuur heeft meestal één pipeline voor de implementatie. Dit zorgt voor een eenvoudige onderhoud, maar een enkele bug kan het hele proces vertragen.\\ 
 Wanneer de code opgedeeld wordt in verschillende repositories, spreken we over een polyrepo. Een project is dan verspreid over meerdere bronnen. Dit heeft tal van voordelen maar brengt ook wat nadelen met zich mee.\\
-Bedrijven die gebruik maken van microservices delen snel hun code op in verschillende repositories (polyrepos).  De teams ontwikkelen hun services onafhankelijk van elkaar en bij gevolg gebruiken ze dus hun eigen repo. De voordelen van deze structuur zijn duidelijk. Een klein team kan snel en zonder restricties hun eigen code in productie plaatsen.\\  
-Het nadeel is dat alle kennis verspreid is over verschillende repos, in het slechtste geval kom je op een punt waarbij niemand meer weet hoe het volledige systeem opgebouwd en geïmplementeerd wordt. \\
+Volgens het onderzoek van ~\autocite{Powell2021} delen bedrijven die gebruik maken van microservices hun code op in verschillende repositories (polyrepos). De teams ontwikkelen hun services onafhankelijk van elkaar en bij gevolg gebruiken ze dus hun eigen repo. De voordelen van deze structuur zijn duidelijk. Een klein team kan snel en zonder restricties hun eigen code in productie plaatsen.\\  
+Het nadeel is dat alle kennis verspreid is over verschillende repos, in het slechtste geval kom je op een punt waarbij niemand meer weet hoe het volledige systeem opgebouwd en geïmplementeerd wordt. Bij een slechte implementatie kunnen er ook \emph{dependencies} ontstaan tussen de verschillende repos. \\
+\\
+\\
+\\
 \\
 Het gebruik van een enkele repo (monorepo) heeft enkele voordelen:
 \begin{itemize}
@@ -196,11 +205,11 @@ Het gebruik van een enkele repo (monorepo) heeft enkele voordelen:
         Alle logica is terug te vinden in enkele repo, hierdoor is er minder verlies van kennis over de jaren heen.
 \end{itemize}
 Een monorepo brengt ook wat uitdagingen met zich mee. Simpele aanpassingen in de code kan een grote impact hebben op andere componenten. Het implementatie proces is ingewikkelder en kan bij foute implementatie heel wat vertraging opleveren.\\ 
-Beide strategieën hebben hun voor- en nadelen, er is geen winnaar. Het team kiest welk systeem het best aan hun noden voldoet.
+Beide strategieën hebben hun voor- en nadelen, er is geen winnaar. Het team kiest welk systeem het best aan zijn noden voldoet.
 
 \newpage
 \section{Monolithische architectuur}
-Een monololitische architectuur betekent dat alles uit één stuk samengesteld is. De Monololitisch applicatie beschrijft een softwareapplicatie waarin verschillende componenten worden gecombineerd tot een enkel programma vanaf een enkel platform. De volgende componenten kunnen voorkomen:
+Volgens de blog van ~\autocite{Monolith2014} betekent dat een monololitische architectuur samengesteld is uit één stuk. De Monololitisch applicatie beschrijft een softwareapplicatie waarin verschillende componenten worden gecombineerd tot een enkel programma vanaf een enkel platform. De volgende componenten kunnen voorkomen:
 \begin{itemize}
     \item Authorisatie
     \item Presentatie
@@ -215,6 +224,6 @@ Een monololitische architectuur betekent dat alles uit één stuk samengesteld i
     \includegraphics[width=1\textwidth]{Monoliet.png}
 \end{figure}
 Deze achitectuurvorm biedt de meeste voordelen bij kleinschalige projecten of systemen. Mits alles één geheel vormt, is een dergelijke applicatie makkelijk te ontwikkelen en ligt de progressiesnelheid relatief hoog. Hoe groter het project hoe meer problemen zich voordoen bij monolithische systemen. De codekwaliteit zal snel dalen als er meer duplicate code zal onstaan. Nieuwe features zullen trager ontwikkeld worden. Bugs zullen minder snel opgespoord worden. Een bijkomend probleem is dat nieuwe developers tijd zullen nodig hebben om in het project mee te stappen omdat de kennis hoofdzakelijk bij de originele ontwikkelaars zit. \\
-De applicatie is makkelijk om in productie te plaatsen. Het nadeel is dat bij elke update het volledige deployprocess uitgevoerd wordt. Hierdoor is het onmogelijk om CI/CD te implementeren en wordt er meestal met vast deploy moment gewerkt. Als de update mislukt moet het volledige systeem terug gedraaid worden.\\
-De applicatie zal hoogstens één technologie bevatten. Hierdoor is het systeem volledig afhankelijk van die ene technologie. Dit zorgt ervoor dat de onderneming minder snel op marktsverandering kan inspelen.\\
-Het systeem in productie kan enkel horizontaal geschaald worden. Dit beperkt de opties die mogelijk zijn om extra resources toe te voegen. 
+Een nadeel is dat bij elke update het volledige deployprocess uitgevoerd wordt. Hierdoor is het onmogelijk om CI/CD te implementeren en wordt er meestal met een vast \emph{deploy} moment gewerkt. Als een update mislukt, moet het volledige systeem teruggedraaid worden.\\
+De applicatie bevat in vele gevallen maar één technologie. Hierdoor is het systeem volledig afhankelijk van die ene technologie. Dit zorgt ervoor dat de onderneming minder snel op een marktsverandering kan inspelen.\\
+Monolieten kunnen meestal enkel maar verticaal geschaald worden.

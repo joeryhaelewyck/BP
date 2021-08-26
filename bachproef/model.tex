@@ -25,17 +25,17 @@ De kosten die een bedrijf zal maken om te transformeren van een monolithische ar
 In vele gevallen zal de loonkost de grootste kost zijn voor een bedrijf. Volgens \emph{https://loonkost.besox.be/} kost de gemiddelde developer met een maandelijkse bruto loon van 3500 euro, 5160.72 euro per maand of 61.928.63 euro per jaar.
 
 Hoeveel personen je nodig hebt om de transformatie uit te voeren hangt natuurlijk af van de grootte van het systeem en de manier waarop het bedrijf met zijn \emph{resources} om springt. 
-Als het aantal benodigde werkkrachten is vastgelegd, komt het bedrijf op een volgend kruispunt te staan over hoe ze deze plaatsen zullen invullen.\\ Een eerst optie is om de werkkrachten te halen uit het bestaande personeel. In vele gevallen zal dit niet mogelijk zijn omdat de nodige kennis niet aanwezig is of om dat het huidige systeem die nodig is om het geld in het laadje te brengen, onderhouden moet worden. De tweede optie is om extra personeel aan te werven, hetzij consultants of vaste werknemers.\\ 
-Als ervoor consultants gekozen wordt, heb je het voordeel dat de kosten afgeschreven kunnen worden op het project. Wanneer het project klaar is, kan het bedrijf zich makkelijk ontdoen van de tijdelijke werkkrachten.  Het grootte nadeel is dat de kennis van de nieuwe architectuur grotendeels verloren gaat. Dit is een onrechtstreekse kost die moeilijk in kaart te brengen is en veel bedrijven zullen hier geen rekening mee houden. Maar op lange termijn kan deze ontbrekende kennis voor onvoorziene kosten zorgen.
+Als het aantal benodigde werkkrachten is vastgelegd, komt het bedrijf op een volgend kruispunt te staan over hoe ze deze plaatsen zullen invullen.\\ Een eerst optie is om de werkkrachten te halen uit het bestaande personeel. In sommige gevallen zal dit niet mogelijk zijn omdat de nodige kennis niet aanwezig is of om dat het huidige systeem die nodig is om het geld in het laadje te brengen, onderhouden moet worden. De tweede optie is om extra personeel aan te werven, hetzij consultants of vaste werknemers.\\ 
+Als ervoor consultants gekozen wordt, heb je het voordeel dat de kosten afgeschreven kunnen worden op het project. Wanneer het project klaar is, kan het bedrijf zich makkelijk ontdoen van de tijdelijke werkkrachten.  Het grootte nadeel is dat de kennis van de nieuwe architectuur grotendeels verloren gaat. Dit is een onrechtstreekse kost die moeilijk in kaart te brengen is en veel bedrijven zullen hier geen rekening mee houden. Maar op lange termijn kan deze ontbrekende kennis voor onvoorziene kosten zorgen. Het beste scenario is wanneer je de twee opties kan combineren. Het bestaande personeel krijgt de optie om door te groeien en consultants kunnen het \emph{legacy} werk tijdelijk overnemen.
 
 \subsection{Tijd}
 
-De uitspraak \emph{time is money} is ook hiervan toepassing. Hoe langer de transformatie duurt, hoe sneller de kosten oplopen. Er zal ook meer kans zijn op onvoorziene kosten.\\
-In vele gevallen zal de bestaande monoliet ook niet geüpdatet worden en enkel onderhouden worden. Ouderhoud is een kost die niet afgeschreven kan worden, bedrijven willen dit dus zo veel mogelijk vermijden. Mits het huidige systeem ook geen updates krijgt, wordt er ook geen extra meerwaarde gecreëerd voor het bedrijf.
+De uitspraak \emph{time is money} is ook hiervan toepassing. Hoe langer de transformatie duurt, hoe sneller de kosten oplopen. Er zal ook grotere kans zijn op onvoorziene kosten.\\
+In vele gevallen zal de bestaande monoliet ook niet geüpdatet worden en enkel onderhouden worden. Onderhoud is een kost die niet afgeschreven kan worden, bedrijven willen dit dus zo veel mogelijk vermijden. Mits het huidige systeem ook geen updates krijgt, wordt er ook geen extra meerwaarde gecreëerd voor het bedrijf.
 
 \subsection{Infrastructuur}
 
-De kosten voor de infrastructuur is ook per bedrijf verschillend. Voor de simpelste microservice te maken in AWS heb je enkel een \emph{lambda} en een \emph{API gateway} nodig. Deze miscroservice is heel beperkt in functionaliteit en in meeste gevallen heb je ook nog andere infrastructuur nodige zoals een EC2 server en een eventuele database. AWS factureert per aantal API calls, zie figuur \ref{awscost}.
+De kosten voor infrastructuur zijn ook per bedrijf verschillend. Voor de simpelste microservice te maken in AWS heb je enkel een \emph{lambda} en een \emph{API gateway} nodig. Deze miscroservice is heel beperkt in functionaliteit en in sommige gevallen heb je ook nog andere infrastructuur nodige zoals een EC2 server en een eventuele database. AWS factureert per aantal API calls, zie figuur \ref{awscost}.
 
 \begin{figure}[!htb]
      \centering
@@ -47,27 +47,27 @@ Hieronder valt ook de veranderingen van technologieën.
 
 \section{Het sociale aspect}
 
-In dit hoofdstuk worden de effecten of veranderingen die aan de transformatie verbonden zijn besproken. Deze effecten kunnen zowel positief als negatief zijn, bedoeld of onbedoeld, direct of indirect ~\autocite{Clusters2020}
+In dit hoofdstuk worden de effecten of veranderingen die aan de transformatie verbonden zijn besproken. Deze effecten kunnen zowel positief als negatief zijn, bedoeld of onbedoeld, direct of indirect.
 
 \subsection{Personeel}
 
-De transformatie van een monoliet naar microservices kan een impact hebben op de dagelijkse activiteiten. Tijdens de transformatie kan er gekozen worden voor een nieuwe technologie en kan de systeem infrastructuur aanpassen. Voor jonge mensen heeft dit meestal minder impact. De jongere staan veel meer open voor verandering dan de oudere, dit geldt ook voor programmeren.
+De transformatie van een monoliet naar microservices kan een impact hebben op de dagelijkse activiteiten. Tijdens de transformatie kan er gekozen worden voor een nieuwe technologie en kan de systeem infrastructuur aanpassen. Uit het onderzoek van ~\autocite{Schaik2014} blijkt dat er meer weerstand is op complexe veranderingen.  
 
-Een persoon die al 20 jaar hetzelfde werk doet, zal zich veel minder snel aanpassen. In extreme gevallen zal deze persoon zich niet willen aanpassen en het bedrijf verlaten. Dit kan ervoor zorgen dat er kennis van het huidige systeem het bedrijf verlaat en kan de transformatie vertragen. 
+Hoe duidelijker de verandering is, hoe minder weerstand er zal geboden worden tegen deze verandering.
 
-Omscholing zal ook geld en tijd kosten. Sommige bedrijven willen investeren in hun personeel en bieden hen de kans aan om kennis op te doen over de nieuwe technologie. Deze investering is niet garandeert om succesvol te zijn.
+Omscholing zal ook geld en tijd kosten. Sommige bedrijven willen investeren in hun personeel en bieden hen de kans aan om kennis op te doen over de nieuwe technologie. Deze investering garandeert geen succes.
 
-Verandering zal niet altijd iedereen kunnen overtuigen. De idealen van personen kunnen niet meer in dezelfde lijn liggen als die van het bedrijf. De schijding van wegen tussen die twee is dan uiteindelijk onvermijdbaar.
+Verandering zal niet altijd iedereen kunnen overtuigen. De idealen van personen kunnen niet meer in dezelfde lijn liggen als die van het bedrijf. In sommige gevallen kan dit leiden tot een scheiding tussen de twee partijen.
 
 \subsection{Activiteiten}
 
-Tijdens de transformatie en hoofdzakelijk erna, zullen de dagelijkse activiteiten van het personeel er anders uit zien. Teams kunnen onderverdeeld worden in kleinere teams die verantwoordelijk zijn voor 1 of meerdere microservices. Er kunnen nieuwe functies of rollen ontstaan, maar ook bestaande functies kunnen verdwijnen.  
+Tijdens en vooral na de transformatie, zullen de dagelijkse activiteiten van het personeel er anders uit zien. Teams kunnen onderverdeeld worden in kleinere teams die verantwoordelijk zijn voor één of meerdere microservices. Er kunnen nieuwe functies of rollen ontstaan, maar ook bestaande functies kunnen verdwijnen.  
 
 \section{Overzicht}
 
 De overgang van een monolithische architectuur naar microservices zorgt voor vele uitdagingen. Het bedrijf zal een goede schatting moeten maken van de financiële kosten. Een dergelijke transformatie creëert op korte termijn weinig bedrijfswaarde. De kosten zullen stijgen waarbij de winsten op korte termijn niet direct omhoog zullen gaan. Aandeelhouders kunnen daarom niet altijd overtuigd worden om een dergelijke verandering uit te voeren.
 
-Het opgemaakte model bestaat uit 5 pijlers
+Het opgemaakte model bestaat uit vijf pijlers
 \begin{itemize}
     \item Tijd
     \item loonkost
@@ -76,5 +76,5 @@ Het opgemaakte model bestaat uit 5 pijlers
     \item activiteiten
 \end{itemize}
 
-Een bedrijf kan deze 5 pijlers als basis gebruiken om in te schatten wat de precieze impact zal zijn van de transformatie.
+Een bedrijf kan deze vijf pijlers als basis gebruiken om in te schatten wat de mogelijke impact zal zijn van de transformatie.
 
