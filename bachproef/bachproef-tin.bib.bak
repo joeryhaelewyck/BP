@@ -163,4 +163,11 @@
   url    = {https://www.edureka.co/blog/microservices-design-patterns},
 }
 
+@Manual{Richardson2021,
+  author = {Chris Richardson},
+  date   = {2021},
+  title  = {What are microservices},
+  url    = {https://microservices.io/index.html},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
